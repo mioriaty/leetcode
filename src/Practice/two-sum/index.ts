@@ -20,6 +20,17 @@
 
   Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?
   => use hash map => O(n)
+
+  Giải thích đề bài:
+    Tìm 2 số trong mảng nums sao cho tổng của chúng bằng target. Mảng nums có thể chứa các số trùng nhau. Trả về index của 2 số đó.
+
+  Thuật toán:
+    1. Khởi tạo 1 hash map
+    2. Dùng vòng lặp for để duyệt từng phần tử của mảng nums
+    3. Tại mỗi phần tử nums[i], tính diff = target - nums[i]
+    4. Nếu map[diff] !== undefined thì return [map[diff], i]
+    5. Nếu không thì map[nums[i]] = i
+    6. Return []
 */
 type HashMap = { [key: number]: number };
 
